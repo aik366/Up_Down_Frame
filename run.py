@@ -1,13 +1,16 @@
 import customtkinter as ctk
+import pywinstyles
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("violet.json")
-
 
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.geometry("400x400+600+300")
+        self.title("Up Down Frame")
+
+        pywinstyles.apply_style(self, "aero")
 
         self.start = 110
         self.end = 410
